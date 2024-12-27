@@ -38,211 +38,104 @@ Publish the website in the LocalHost.
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-        }
-
-        /* Navbar */
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #000;
-        }
-
-        .btn-primary {
-            background-color: #ea4c89;
-            border: none;
-            border-radius: 20px;
-            padding: 8px 20px;
-        }
-
-        .btn-primary:hover {
-            background-color: #d44077;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .hero-section h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: #333;
-        }
-
-        .hero-section p {
-            font-size: 1.1rem;
-            color: #666;
-        }
-
-        .search-bar {
-            max-width: 500px;
-            margin: 20px auto;
-            position: relative;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 12px 20px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-        }
-
-        .search-bar .btn {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 50%;
-            background-color: #ea4c89;
-            color: #fff;
-        }
-
-        /* Trending Section */
-        .trending-buttons .btn {
-            background-color: #f1f1f1;
-            border: none;
-            border-radius: 20px;
-            margin: 5px;
-            color: #333;
-            padding: 6px 12px;
-            font-size: 0.9rem;
-        }
-
-        .trending-buttons .btn:hover {
-            background-color: #eaeaea;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            padding: 40px 0;
-        }
-
-        .gallery img {
-            width: 100%;
-            border-radius: 15px;
-            transition: transform 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        .card-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin: 10px 0 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 </head>
 
-<body>
+<body class="bg-light">
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">Dribbble</a>
+            <a class="navbar-brand fs-3 fw-bold" href="#">Dribbble</a>
             <div class="ms-auto">
                 <a href="#" class="btn btn-outline-dark me-2">Sign Up</a>
-                <a href="#" class="btn btn-primary">Log In</a>
+                <a href="#" class="btn btn-danger">Log In</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>I Planet</h1>
-        <p>Explore more products with affordable price.</p>
-        <div class="search-bar">
-            <input type="text" placeholder="What are you looking for?" class="form-control">
-            <button class="btn"><span class="material-symbols-outlined">
-                    search
-                </span>
-            </button>
+    <section class="text-center py-5">
+        <h1 class="display-4 fw-bold">I Planet</h1>
+        <p class="lead text-muted">Explore more products with affordable price.</p>
+
+        <!-- Search Bar -->
+        <div class="d-flex justify-content-center">
+            <div class="position-relative w-100 w-md-50">
+                <input type="text" class="form-control rounded-pill ps-4 py-2" placeholder="What are you looking for?">
+                <button class="btn btn-danger position-absolute top-50 end-0 translate-middle-y rounded-circle shadow-sm">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
         </div>
+
         <!-- Trending Searches -->
-        <div class="trending-buttons">
-            <button class="btn">All</button>
-            <button class="btn">Mobile</button>
-            <button class="btn">Mac</button>
-            <button class="btn">I watch</button>
-            <button class="btn">Apple care</button>
-            <button class="btn">Pision pro</button>
+        <div class="mt-4">
+            <button class="btn btn-light me-2 rounded-pill">All</button>
+            <button class="btn btn-light me-2 rounded-pill">Mobile</button>
+            <button class="btn btn-light me-2 rounded-pill">Mac</button>
+            <button class="btn btn-light me-2 rounded-pill">I watch</button>
+            <button class="btn btn-light me-2 rounded-pill">Apple care</button>
+            <button class="btn btn-light me-2 rounded-pill">Vision pro</button>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section">
+    <section class="py-5">
         <div class="container">
             <div class="row g-4">
                 <!-- Card 1 -->
                 <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="16 pro max.avif"
-                            alt="Design" class="card-img-top">
+                    <div class="card border-0 shadow-sm">
+                        <img src="16 pro max.avif" alt="Design" class="card-img-top rounded-3">
                         <div class="card-body p-2">
-                            <p class="card-title">Apple 16 pro max</p>
+                            <p class="card-title fs-6 fw-semibold text-center">Apple 16 pro max</p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="16.webp"
-                            alt="Design" class="card-img-top">
+                    <div class="card border-0 shadow-sm">
+                        <img src="16.webp" alt="Design" class="card-img-top rounded-3">
                         <div class="card-body p-2">
-                            <p class="card-title">Apple 16</p>
+                            <p class="card-title fs-6 fw-semibold text-center">Apple 16</p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="apple care.jpeg"
-                            alt="Design" class="card-img-top">
+                    <div class="card border-0 shadow-sm">
+                        <img src="apple care.jpeg" alt="Design" class="card-img-top rounded-3">
                         <div class="card-body p-2">
-                            <p class="card-title">Mac pro</p>
+                            <p class="card-title fs-6 fw-semibold text-center">Mac pro</p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 4 -->
                 <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="i watch.jpeg"
-                            alt="Design" class="card-img-top">
+                    <div class="card border-0 shadow-sm">
+                        <img src="i watch.jpeg" alt="Design" class="card-img-top rounded-3">
                         <div class="card-body p-2">
-                            <p class="card-title">I watch</p>
+                            <p class="card-title fs-6 fw-semibold text-center">I watch</p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 5 -->
                 <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="mac pro.jpeg"
-                            alt="Design" class="card-img-top">
+                    <div class="card border-0 shadow-sm">
+                        <img src="mac pro.jpeg" alt="Design" class="card-img-top rounded-3">
                         <div class="card-body p-2">
-                            <p class="card-title">Apple care</p>
+                            <p class="card-title fs-6 fw-semibold text-center">Apple care</p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 6 -->
                 <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="vission pro.jpeg"
-                            alt="Design" class="card-img-top">
+                    <div class="card border-0 shadow-sm">
+                        <img src="vission pro.jpeg" alt="Design" class="card-img-top rounded-3">
                         <div class="card-body p-2">
-                            <p class="card-title">Vission pro</p>
+                            <p class="card-title fs-6 fw-semibold text-center">Vission pro</p>
                         </div>
                     </div>
                 </div>
@@ -255,6 +148,7 @@ Publish the website in the LocalHost.
 </body>
 
 </html>
+
 
 ```
 
